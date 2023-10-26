@@ -1,0 +1,37 @@
+@import "default.scss";
+
+* {
+  background: none;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 150ms linear;
+}
+
+body {
+  background: $dark-color;
+  min-height: 100vh;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-color;
+}
+
+i,
+svg {
+  user-select: none;
+}
