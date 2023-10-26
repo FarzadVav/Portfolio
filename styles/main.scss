@@ -1,5 +1,6 @@
 @import "default.scss";
 
+// Light/Dark mode
 html[data-theme="light"] {
   --bg-color: #{$light-color};
   --text-color: #{$dark-color};
@@ -10,6 +11,7 @@ html[data-theme="dark"] {
   --text-color: #{$light-color};
 }
 
+// CSS reset & Default design
 * {
   background: none;
   border: 0;
@@ -24,6 +26,7 @@ html[data-theme="dark"] {
 
 body {
   background: var(--bg-color);
+  color: var(--text-color);
   min-height: 100vh;
   position: relative;
 }
