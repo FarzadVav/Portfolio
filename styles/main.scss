@@ -1,5 +1,15 @@
 @import "default.scss";
 
+html[data-theme="light"] {
+  --bg-color: #{$light-color};
+  --text-color: #{$dark-color};
+}
+
+html[data-theme="dark"] {
+  --bg-color: #{$dark-color};
+  --text-color: #{$light-color};
+}
+
 * {
   background: none;
   border: 0;
@@ -13,7 +23,7 @@
 }
 
 body {
-  background: $dark-color;
+  background: var(--bg-color);
   min-height: 100vh;
   position: relative;
 }
@@ -28,7 +38,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $light-color;
+  background: var(--text-color);
 }
 
 i,
