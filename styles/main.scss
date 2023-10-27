@@ -1,4 +1,4 @@
-@import "default.scss";
+@import "_default.scss";
 
 // Light/Dark mode
 html[data-theme="light"] {
@@ -14,9 +14,9 @@ html[data-theme="dark"] {
 // CSS reset & Default design
 * {
   background: none;
+  text-decoration-color: $primary-color;
   border: 0;
   outline: 0;
-  text-decoration: none;
   list-style: none;
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +27,8 @@ html[data-theme="dark"] {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  font-family: sans-serif;
+  font-size: 16px;
   min-height: 100vh;
   position: relative;
 }
@@ -47,4 +49,22 @@ body {
 i,
 svg {
   user-select: none;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    filter: brightness(0.75);
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
 }
