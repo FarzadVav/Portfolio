@@ -25,10 +25,12 @@ html[data-theme="dark"] {
 }
 
 body {
+  -webkit-print-color-adjust: exact !important;
   background: var(--bg-color);
   color: var(--text-color);
   font-family: sans-serif;
   font-size: 16px;
+  height: 100vh;
   min-height: 100vh;
   position: relative;
 }
@@ -64,7 +66,6 @@ a {
   }
 }
 
-.container {
-  width: 100%;
-  padding: 0 1.5rem;
+@page {
+  margin: 0;
 }

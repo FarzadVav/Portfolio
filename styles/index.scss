@@ -1,0 +1,66 @@
+@import "./default";
+
+section {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  aside {
+    width: 25%;
+    height: 100%;
+    position: relative;
+  }
+
+  main {
+    background: #0066ff36;
+    width: calc(75% - 1rem);
+    height: 100%;
+  }
+}
+
+.profile {
+  background-color: $dark-color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 4rem;
+  border-radius: 0 0 100vw 100vw;
+  position: absolute;
+  top: -1rem;
+  z-index: 1;
+
+  * {
+    color: $light-color;
+  }
+
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+  
+  span {
+    margin-top: .3rem;
+    font-size: 0.75rem;
+  }
+}
+
+.detials {
+  background-color: $light-color;
+  filter: brightness(0.95);
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 4rem;
+  border-radius: 100vw;
+  transform: translateY(13rem);
+}
