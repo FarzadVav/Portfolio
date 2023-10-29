@@ -28,7 +28,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0 4rem;
+  padding: 1rem 0;
   border-radius: 0 0 100vw 100vw;
   position: absolute;
   top: -1rem;
@@ -48,12 +48,26 @@ section {
   h1 {
     width: 100%;
     text-align: center;
-    margin-top: 1.2rem;
+    margin-top: 2rem;
   }
-  
+
   span {
-    margin-top: .3rem;
+    margin-top: 1rem;
     font-size: 0.75rem;
+  }
+
+}
+
+.theme-btn {
+  background-color: $dark-color;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.15);
   }
 }
 
@@ -89,9 +103,27 @@ section {
     opacity: 0;
     transform: translateY(-10rem);
   }
-  
+
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media print {
+  .profile {
+    padding-bottom: 3rem;
+
+    span {
+      margin-top: .5rem;
+    }
+  }
+
+  .theme-btn {
+    display: none;
+  }
+
+  .detials {
+    top: 15rem;
   }
 }
