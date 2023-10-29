@@ -1,4 +1,16 @@
 $dark-color: #2a2a2a;
 $light-color: #e5e5e5;
-$primary-color: #5096f1;
-$second-color: #8154eb;
+$light-primary-color: #4394ff;
+$dark-primary-color: #834dff;
+
+html[data-theme="light"] {
+  --bg-color: #{$light-color};
+  --text-color: #{$dark-color};
+  --primary-color: #{$light-primary-color};
+}
+
+html[data-theme="dark"] {
+  --bg-color: #{$dark-color};
+  --text-color: #{$light-color};
+  --primary-color: #{$dark-primary-color};
+}

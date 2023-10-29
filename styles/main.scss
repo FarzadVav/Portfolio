@@ -1,20 +1,9 @@
-@import "_default.scss";
-
-// Light/Dark mode
-html[data-theme="light"] {
-  --bg-color: #{$light-color};
-  --text-color: #{$dark-color};
-}
-
-html[data-theme="dark"] {
-  --bg-color: #{$dark-color};
-  --text-color: #{$light-color};
-}
+@import "default";
 
 // CSS reset & Default design
 * {
   background: none;
-  text-decoration-color: $primary-color;
+  text-decoration-color: var(--primary-color);
   border: 0;
   outline: 0;
   list-style: none;
@@ -59,7 +48,7 @@ svg {
 }
 
 a {
-  color: $primary-color;
+  color: var(--primary-color);
 
   &:hover {
     filter: brightness(0.75);
