@@ -2,6 +2,11 @@
 
 // CSS reset & Default design
 * {
+  -webkit-print-color-adjust: exact;
+  -moz-print-color-adjust: exact;
+  -ms-print-color-adjust: exact;
+  print-color-adjust: exact;
+
   background: none;
   text-decoration-color: var(--primary-color);
   border: 0;
@@ -14,11 +19,10 @@
 }
 
 body {
-  -webkit-print-color-adjust: exact !important;
-  background: var(--bg-color);
   color: var(--text-color);
   font-family: sans-serif;
   font-size: 16px;
+  width: 100%;
   height: 100vh;
   min-height: 100vh;
   position: relative;

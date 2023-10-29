@@ -1,7 +1,8 @@
 @import "default";
 
 section {
-  height: 100%;
+  background-color: var(--bg-color);
+  min-height: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -29,11 +30,11 @@ section {
   align-items: center;
   padding: 1rem 0;
   border-radius: 0 0 100vw 100vw;
-  position: absolute;
+  position: relative;
   top: -1rem;
-  z-index: 1;
   opacity: 0;
   animation: shwo-fade-down 1s 1 forwards;
+  z-index: 1;
 
   * {
     color: $light-color;
@@ -79,12 +80,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 1rem 4rem;
   border-radius: 100vw;
-  position: absolute;
-  top: 13rem;
   opacity: 0;
-  animation: shwo-fade-down 1s 1 forwards;
+  animation: shwo-fade-down-2 1s 1 forwards;
   animation-delay: 750ms;
 }
 
@@ -110,6 +108,18 @@ section {
   }
 }
 
+@keyframes shwo-fade-down-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-4.5rem);
+  }
+}
+
 @media print {
   .profile {
     padding-bottom: 3rem;
@@ -121,9 +131,5 @@ section {
 
   .theme-btn {
     display: none;
-  }
-
-  .detials {
-    top: 15rem;
   }
 }
