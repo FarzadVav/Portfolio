@@ -32,14 +32,14 @@ const changeThemeToggleIcon = () => {
 }
 
 // --- EVENTS
-toggle.addEventListener('click', () => {
-  if (theme === LIGHT) theme = DARK
-  else theme = LIGHT
+// toggle.addEventListener('click', () => {
+//   if (theme === LIGHT) theme = DARK
+//   else theme = LIGHT
 
-  changeThemeHandler()
-})
+//   changeThemeHandler()
+// })
 
-window.addEventListener('load', () => {
-  theme = localStorage.getItem('theme')
-  changeThemeHandler()
-})
+// window.addEventListener('load', () => {
+//   theme = localStorage.getItem('theme')
+//   changeThemeHandler()
+// })
