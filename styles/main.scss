@@ -1,4 +1,5 @@
 @import "default";
+@import "media.mixin";
 
 // CSS reset & Default design
 * {
@@ -57,7 +58,15 @@ a {
 
 .wrapper {
   width: 100%;
-  padding: 0 3rem;
+  padding: 0 1rem;
+  
+  @include media(sm) {
+    padding: 0 2rem;
+  }
+
+  @include media(lg) {
+    padding: 0 3rem;
+  }
 }
 
 .btn-reverse {
