@@ -1,0 +1,27 @@
+@import "default";
+
+@mixin media($size) {
+  @if ($size ==sm) {
+    @media (min-width: $sm) {
+      @content;
+    }
+  }
+
+  @if ($size ==md) {
+    @media (min-width: $md) {
+      @content;
+    }
+  }
+
+  @if ($size ==lg) {
+    @media (min-width: $lg) {
+      @content;
+    }
+  }
+
+  @if ($size ==xl) {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}
