@@ -1,16 +1,22 @@
+// colors
 $dark-color: #2a2a2a;
-$light-color: #e5e5e5;
-$light-primary-color: #4394ff;
-$dark-primary-color: #834dff;
+$light-color: #cfd8e9;
+$primary-light: #6491f1;
+$primary-dark: #a772ec;
 
 html[data-theme="light"] {
   --bg-color: #{$light-color};
   --text-color: #{$dark-color};
-  --primary-color: #{$light-primary-color};
+  --primary-color: #{$primary-light};
+  --reverse-color: #fff;
 }
 
 html[data-theme="dark"] {
   --bg-color: #{$dark-color};
   --text-color: #{$light-color};
-  --primary-color: #{$dark-primary-color};
+  --primary-color: #{$primary-dark};
+  --reverse-color: #000;
 }
+
+// radius
+$rounded: 0.25rem;

@@ -3,7 +3,7 @@
 // CSS reset & Default design
 * {
   background: none;
-  text-decoration-color: var(--primary-color);
+  text-decoration: none;
   border: 0;
   outline: 0;
   list-style: none;
@@ -43,14 +43,24 @@ svg {
 }
 
 svg {
-  width: 16px;
-  height: 16px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 a {
   color: var(--primary-color);
 
   &:hover {
-    filter: brightness(0.75);
+    filter: brightness(0.85);
   }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.btn-reverse {
+  background-color: var(--reverse-color);
+  color: var(--text-color);
 }

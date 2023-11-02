@@ -1,1 +1,78 @@
 @import "default";
+
+nav {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+
+  ul {
+    height: 3rem;
+    display: inherit;
+    justify-content: center;
+    align-items: inherit;
+
+    li {
+      height: 100%;
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+    }
+  }
+
+  .socials a,
+  .socials button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    margin-left: 2rem;
+    border-radius: 50%;
+  }
+
+  .socials a {
+    background-color: var(--bg-color);
+
+    html[data-theme="light"] &:hover {
+      filter: brightness(0.9);
+    }
+
+    html[data-theme="dark"] &:hover {
+      filter: brightness(0.8);
+    }
+
+    svg {
+      stroke: var(--text-color);
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .links {
+    a {
+      height: 100%;
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      padding: 0 1.5rem;
+    }
+
+    .btn-reverse {
+      margin-right: 1rem;
+      border-radius: $rounded;
+
+      &:hover {
+        filter: none;
+      }
+    }
+  }
+}
+
+.theme-btn {
+  background-color: var(--reverse-color);
+  color: var(--text-color);
+  filter: brightness(1.25);
+  cursor: pointer;
+}
