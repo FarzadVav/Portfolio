@@ -52,14 +52,14 @@ a {
   color: var(--primary-color);
 
   &:hover {
-    filter: brightness(0.85);
+    filter: brightness(0.8);
   }
 }
 
 .wrapper {
   width: 100%;
   padding: 0 1rem;
-  
+
   @include media(sm) {
     padding: 0 2rem;
   }

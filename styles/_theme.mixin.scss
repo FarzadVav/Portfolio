@@ -1,0 +1,13 @@
+@mixin theme($theme) {
+  @if ($theme ==light) {
+    html[data-theme="light"] {
+      @content;
+    }
+  }
+
+  @else if ($theme ==dark) {
+    html[data-theme="dark"] {
+      @content;
+    }
+  }
+}
