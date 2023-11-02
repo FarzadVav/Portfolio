@@ -5,7 +5,11 @@
 header {
   display: flex;
   align-items: center;
-  padding-top: 1rem !important;
+  padding-top: 0.5rem !important;
+
+  @include media(md) {
+    padding-top: 1rem !important;
+  }
 
   nav {
     height: 3rem;
@@ -41,7 +45,10 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-left: 1rem;
+
+  @include media(md) {
+    margin-left: 1rem;
+  }
 
   @include media(xl) {
     margin-left: 2rem;
@@ -90,9 +97,43 @@ header {
 }
 
 .theme-btn {
-  background-color: var(--reverse-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   cursor: pointer;
 
-  @include header__circle-btn()
+  &:active {
+    filter: brightness(0.8);
+  }
+
+  @include header__circle-btn();
+
+  @include media(md) {
+    background-color: var(--reverse-color);
+  }
+}
+
+.mobile-menu-btn {
+  background-color: var(--bg-color);
+  stroke: var(--text-color);
+  cursor: pointer;
+  margin-left: 0 !important;
+
+  &:active {
+    filter: brightness(0.8);
+  }
+
+  @include header__circle-btn();
+
+  @include media(md) {
+    display: none;
+  }
+}
+
+.contact-me {
+  height: 100%;
+  margin: 0 auto 0 0.5rem;
+
+  @include media(md) {
+    display: none;
+  }
 }
