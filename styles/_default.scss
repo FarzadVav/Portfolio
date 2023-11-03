@@ -5,12 +5,15 @@ $dark-color: #2a2a2a;
 $light-color: #cfd8e9;
 $primary-light: #6491f1;
 $primary-dark: #a772ec;
+$second-light: orangered;
+$second-dark: gold;
 
 @include theme(light) {
   --bg-color: #{$light-color};
   --text-color: #{$dark-color};
   --primary-color: #{$primary-light};
   --reverse-color: #fff;
+  --second-color: #{$second-light};
 }
 
 @include theme(dark) {
@@ -18,13 +21,26 @@ $primary-dark: #a772ec;
   --text-color: #{$light-color};
   --primary-color: #{$primary-dark};
   --reverse-color: #000;
+  --second-color: #{$second-dark};
 }
+
+// font sizes
+$fs-base: 1rem;
+$fs-md: 1.25rem;
+$fs-lg: 1.75rem;
+$fs-xl: 2.25rem;
+$fs-2xl: 4rem;
 
 // radius
 $rounded: 0.25rem;
+$rounded-full: 100rem;
 
 // media screens
 $sm: 540px;
 $md: 768px;
 $lg: 1024px;
 $xl: 1280px;
+
+// brightness
+$br-light: 1.075;
+$br-dark: 1.25;

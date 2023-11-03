@@ -2,6 +2,7 @@
 @import "theme.mixin";
 @import "media.mixin";
 
+// header
 header {
   display: flex;
   align-items: center;
@@ -55,7 +56,7 @@ header {
   }
 }
 
-.socials a {
+.header__socials a {
   background-color: var(--bg-color);
 
   svg {
@@ -67,14 +68,8 @@ header {
   @include header__circle-btn()
 }
 
-@include theme(light) {
-  .socials a:hover {
-    filter: brightness(0.9) !important
-  }
-}
-
-.links {
-  a {
+.header__links {
+  a:not(.btn) {
     height: 100%;
     display: inherit;
     justify-content: inherit;
@@ -85,18 +80,9 @@ header {
       margin-left: 1.5rem;
     }
   }
-
-  .btn-reverse {
-    margin-right: 1rem;
-    border-radius: $rounded;
-
-    &:hover {
-      filter: none;
-    }
-  }
 }
 
-.theme-btn {
+.header__theme-btn {
   background-color: var(--bg-color);
   color: var(--text-color);
   cursor: pointer;
@@ -112,14 +98,14 @@ header {
   }
 }
 
-.mobile-menu-btn {
+.header__mobile-menu-btn {
   background-color: var(--bg-color);
   stroke: var(--text-color);
   cursor: pointer;
   margin-left: 0 !important;
 
   &:active {
-    filter: brightness(0.8);
+    filter: brightness($br-dark);
   }
 
   @include header__circle-btn();
@@ -129,11 +115,103 @@ header {
   }
 }
 
-.contact-me {
+.header__contact-me {
   height: 100%;
   margin: 0 auto 0 0.5rem;
 
   @include media(md) {
     display: none;
+  }
+}
+
+// hero section
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.hero-section__right,
+.hero-section__left {
+  height: max-content;
+  display: inherit;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: flex-end;
+}
+
+.hero-section__left {
+  align-items: flex-start;
+
+  h1 {
+    text-align: left;
+    font-size: $fs-2xl;
+  }
+
+  p {
+    font-size: $fs-md;
+    letter-spacing: 0.125rem;
+    margin-top: 0.15rem;
+
+    span {
+      color: var(--second-color);
+    }
+  }
+}
+
+.hero-section__img {
+  width: 25rem;
+}
+
+.hero-section__phone,
+.hero-section__email {
+  background-color: var(--bg-color);
+  display: inherit;
+  justify-content: inherit;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  border-radius: $rounded-full;
+  margin-top: 0.5rem;
+
+  svg {
+    stroke: var(--primary-color);
+    margin-right: 0.65rem;
+  }
+
+  span {
+    color: var(--primary-color);
+    font-size: $fs-base;
+  }
+}
+
+.hero-section__phone {
+  margin-top: 1.5rem;
+}
+
+@include theme(light) {
+
+  .hero-section__phone,
+  .hero-section__email {
+    filter: brightness($br-light);
+  }
+}
+
+@include theme(dark) {
+
+  .hero-section__phone,
+  .hero-section__email {
+    filter: brightness($br-dark);
+  }
+}
+
+// about
+.about {
+  background-color: var(--reverse-color);
+  padding: 2rem 0;
+
+  a {
+    display: inline-block;
+    margin-top: 0.75rem;
   }
 }

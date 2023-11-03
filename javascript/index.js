@@ -1,6 +1,6 @@
 // --- ELEMENTS
 const html = document.querySelector('html')
-const toggle = document.querySelector('.theme-btn')
+const toggle = document.querySelector('.header__theme-btn')
 
 // --- STATES
 const LIGHT = 'light'

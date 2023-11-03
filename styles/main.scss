@@ -23,6 +23,9 @@ body {
   height: 100vh;
   min-height: 100vh;
   position: relative;
+  user-select: none;
+  scroll-behavior: smooth;
+  transition: 150ms linear;
 }
 
 ::-webkit-scrollbar {
@@ -50,10 +53,22 @@ svg {
 
 a {
   color: var(--primary-color);
+}
 
-  &:hover {
-    filter: brightness(0.8);
+@include theme(light) {
+  a:hover {
+    filter: brightness($br-light);
   }
+}
+
+@include theme(dark) {
+  a:hover {
+    filter: brightness($br-dark);
+  }
+}
+
+p {
+  user-select: text;
 }
 
 .wrapper {
@@ -73,7 +88,28 @@ a {
   }
 }
 
+.title {
+  font-size: $fs-lg;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  line-height: 1.5rem;
+  opacity: 0.75;
+}
+
+.btn {
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 0 1.25rem;
+  border-radius: $rounded;
+}
+
 .btn-reverse {
-  background-color: var(--reverse-color);
-  color: var(--text-color);
+  background-color: var(--primary-color);
+  color: var(--reverse-color);
 }
