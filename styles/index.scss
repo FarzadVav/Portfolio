@@ -177,19 +177,27 @@ header {
       font-size: $fs-xl;
     }
 
-    @include media(md) {
+    @include media(lg) {
       font-size: $fs-2xl;
     }
 
-    @include media(lg) {
+    @include media(xl) {
       font-size: $fs-3xl;
     }
   }
 
   p {
-    font-size: $fs-md;
+    font-size: $fs-sm;
     letter-spacing: 0.125rem;
     margin-top: 0.15rem;
+
+    @include media(sm) {
+      font-size: $fs-base;
+    }
+
+    @include media(lg) {
+      font-size: $fs-md;
+    }
 
     span {
       color: var(--second-color);
@@ -218,10 +226,10 @@ header {
 }
 
 .hero-section__img {
-  width: 17rem;
+  width: 22rem;
 
   @include media(lg) {
-    width: 25rem;
+    width: 30rem;
   }
 }
 
