@@ -127,26 +127,63 @@ header {
 // hero section
 .hero-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column-reverse;
   margin-top: 3rem;
+
+  @include media(md) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  @include max-media(md) {
+    padding: 0;
+  }
 }
 
 .hero-section__right,
 .hero-section__left {
+  width: 100%;
   height: max-content;
   display: inherit;
   flex-direction: column;
   justify-content: inherit;
-  align-items: flex-end;
+
+  @include media(md) {
+    width: max-content;
+  }
 }
 
 .hero-section__left {
+  background-color: var(--bg-color);
   align-items: flex-start;
+  padding: 2rem 1rem;
+
+  @include media(sm) {
+    padding: 2rem 1.5rem;
+  }
+
+  @include media(md) {
+    filter: unset !important;
+    padding: 0;
+  }
 
   h1 {
     text-align: left;
-    font-size: $fs-2xl;
+    font-size: $fs-lg;
+
+    @include media(sm) {
+      font-size: $fs-xl;
+    }
+
+    @include media(md) {
+      font-size: $fs-2xl;
+    }
+
+    @include media(lg) {
+      font-size: $fs-3xl;
+    }
   }
 
   p {
@@ -160,19 +197,55 @@ header {
   }
 }
 
+@include theme(light) {
+  .hero-section__left {
+    filter: brightness($br-light);
+  }
+}
+
+@include theme(dark) {
+  .hero-section__left {
+    filter: brightness($br-dark);
+  }
+}
+
+.hero-section__right {
+  align-items: center;
+
+  @include media(md) {
+    align-items: flex-end;
+  }
+}
+
 .hero-section__img {
-  width: 25rem;
+  width: 17rem;
+
+  @include media(lg) {
+    width: 25rem;
+  }
+}
+
+.hero-section__connections {
+  display: inherit;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+
+  @include media(md) {
+    align-items: flex-start;
+    flex-direction: inherit;
+  }
 }
 
 .hero-section__phone,
 .hero-section__email {
   background-color: var(--bg-color);
   display: inherit;
-  justify-content: inherit;
+  justify-content: center;
   align-items: center;
   padding: 0.25rem 1rem;
   border-radius: $rounded-full;
-  margin-top: 0.5rem;
 
   svg {
     stroke: var(--primary-color);
@@ -183,10 +256,6 @@ header {
     color: var(--primary-color);
     font-size: $fs-base;
   }
-}
-
-.hero-section__phone {
-  margin-top: 1.5rem;
 }
 
 @include theme(light) {
