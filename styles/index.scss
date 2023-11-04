@@ -226,7 +226,11 @@ header {
 }
 
 .hero-section__img {
-  width: 22rem;
+  width: 20rem;
+  
+  @include media(lg) {
+    width: 22rem;
+  }
 
   @include media(lg) {
     width: 30rem;
