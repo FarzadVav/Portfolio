@@ -190,7 +190,7 @@ header {
     font-size: $fs-sm;
     letter-spacing: 0.125rem;
     margin-top: 0.65rem;
-    
+
     @include media(sm) {
       font-size: $fs-base;
       margin-top: 0.5rem;
@@ -369,6 +369,33 @@ header {
   }
 
   @include media(xl) {
-    width: calc(33.3333% - 0.6666rem);
+    width: calc(33.3333% - 0.6667rem);
+  }
+}
+
+// in use
+.in-use {
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.in-use__box {
+  width: calc(12.5% - 0.875rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  span {
+    font-style: italic;
+    margin-top: 0.25rem;
   }
 }
