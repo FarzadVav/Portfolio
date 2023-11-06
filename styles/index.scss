@@ -330,8 +330,10 @@ header {
     background-color: var(--bg-color);
     filter: brightness($br-light);
     width: 100%;
-    height: 400px;
+    height: 350px;
     border-radius: inherit;
+    object-fit: cover;
+    object-position: bottom;
   }
 
   span {
