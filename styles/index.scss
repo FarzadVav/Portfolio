@@ -189,10 +189,11 @@ header {
   p {
     font-size: $fs-sm;
     letter-spacing: 0.125rem;
-    margin-top: 0.25rem;
-
+    margin-top: 0.65rem;
+    
     @include media(sm) {
       font-size: $fs-base;
+      margin-top: 0.5rem;
     }
 
     @include media(lg) {
@@ -248,12 +249,15 @@ header {
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 0.65rem;
+  margin-top: 1rem;
 
   @include media(md) {
     align-items: flex-start;
     flex-direction: inherit;
-    margin-top: 1rem;
+  }
+
+  @include media(lg) {
+    margin-top: 1.25rem;
   }
 }
 
@@ -306,7 +310,6 @@ header {
 
 // projects
 .projects {
-  background-color: #ff656525;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -314,6 +317,7 @@ header {
 }
 
 .project__box {
+  background-color: var(--reverse-color);
   width: 100%;
   display: flex;
   flex-direction: column;
