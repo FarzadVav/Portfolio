@@ -88,14 +88,38 @@ p {
   }
 }
 
+.mt-elem {
+  margin-top: $m-elem;
+}
+
+.mb-elem {
+  margin-bottom: $m-elem;
+}
+
 .title {
   font-size: $fs-lg;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .text {
   line-height: 1.5rem;
   opacity: 0.75;
+}
+
+.hover-br {
+  cursor: pointer;
+}
+
+@include theme(light) {
+  .hover-br:hover {
+    filter: brightness($br-light);
+  }
+}
+
+@include theme(dark) {
+  .hover-br:hover {
+    filter: brightness($br-dark);
+  }
 }
 
 .btn {
@@ -107,9 +131,27 @@ p {
   gap: 0.65rem;
   padding: 0 1.25rem;
   border-radius: $rounded;
+  cursor: pointer;
 }
 
 .btn-reverse {
   background-color: var(--primary-color);
   color: var(--reverse-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--reverse-color);
+  stroke: var(--reverse-color);
+}
+
+.btn-ghust {
+  color: var(--primary-color);
+  stroke: var(--primary-color);
+
+  &:hover {
+    background-color: var(--bg-color);
+  }
+
+  @extend .hover-br;
 }

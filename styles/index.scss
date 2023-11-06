@@ -189,7 +189,7 @@ header {
   p {
     font-size: $fs-sm;
     letter-spacing: 0.125rem;
-    margin-top: 0.15rem;
+    margin-top: 0.25rem;
 
     @include media(sm) {
       font-size: $fs-base;
@@ -227,7 +227,7 @@ header {
 
 .hero-section__img {
   width: 20rem;
-  
+
   @include media(lg) {
     width: 22rem;
   }
@@ -237,16 +237,23 @@ header {
   }
 }
 
+@include theme(light) {
+  .hero-section__img {
+    filter: brightness(0.9);
+  }
+}
+
 .hero-section__connections {
   display: inherit;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 0.65rem;
 
   @include media(md) {
     align-items: flex-start;
     flex-direction: inherit;
+    margin-top: 1rem;
   }
 }
 
@@ -293,6 +300,69 @@ header {
 
   a {
     display: inline-block;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
+  }
+}
+
+// projects
+.projects {
+  background-color: #ff656525;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: $rounded-lg;
+
+  img {
+    background-color: var(--bg-color);
+    filter: brightness($br-light);
+    width: 100%;
+    height: 400px;
+    border-radius: inherit;
+  }
+
+  span {
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: $fs-md;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a,
+    button {
+      border-radius: 2.5rem;
+    }
+
+    li:first-child {
+      margin-right: 0.5rem;
+    }
+
+    li:last-child {
+      margin-left: auto;
+    }
+  }
+
+  @include media(sm) {
+    width: calc(50% - 0.5rem);
+  }
+
+  @include media(xl) {
+    width: calc(33.3333% - 0.6666rem);
   }
 }

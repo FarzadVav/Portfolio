@@ -24,6 +24,9 @@ $second-dark: gold;
   --second-color: #{$second-dark};
 }
 
+// spacing
+$m-elem: 3rem;
+
 // font sizes
 $fs-sm: 0.8rem;
 $fs-base: 1rem;
@@ -35,6 +38,11 @@ $fs-3xl: 4rem;
 
 // radius
 $rounded: 0.25rem;
+$rounded-md: 0.5rem;
+$rounded-lg: 1rem;
+$rounded-xl: 1.75rem;
+$rounded-2xl: 2.5rem;
+$rounded-3xl: 3.5rem;
 $rounded-full: 100rem;
 
 // media screens
