@@ -1,13 +1,15 @@
-// --- ELEMENTS
+  import addSkills from "./skills"
+
+// --- Elements
 const html = document.querySelector('html')
 const toggle = document.querySelector('.header__theme-btn')
 
-// --- STATES
+// --- States
 const LIGHT = 'light'
 const DARK = 'dark'
 let theme = html.dataset.theme // 'light' or 'dark'
 
-// --- FUNCTIONS
+// --- Functions
 const changeThemeHandler = () => {
   if (![LIGHT, DARK].includes(theme)) theme = LIGHT
   html.dataset.theme = theme
@@ -41,7 +43,7 @@ const changeThemeToggleIcon = () => {
   }
 }
 
-// --- EVENTS
+// --- Events
 toggle.addEventListener('click', () => {
   if (theme === LIGHT) theme = DARK
   else theme = LIGHT
@@ -50,6 +52,8 @@ toggle.addEventListener('click', () => {
 })
 
 window.addEventListener('load', () => {
+  addSkills()
+
   theme = localStorage.getItem('theme')
   changeThemeHandler()
 })

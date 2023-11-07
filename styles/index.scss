@@ -373,29 +373,18 @@ header {
   }
 }
 
-// in use
-.in-use {
+// Skills
+.in-use,
+.learning {
   display: flex;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-.in-use__box {
-  width: calc(12.5% - 0.875rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  svg {
-    width: 7rem;
-    height: 7rem;
-  }
-
-  span {
-    font-style: italic;
-    margin-top: 0.25rem;
-  }
+.skill-box {
+  background-color: var(--reverse-color);
+  padding: 0.5rem 1rem;
+  border-radius: $rounded-full;
 }
