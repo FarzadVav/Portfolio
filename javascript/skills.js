@@ -20,12 +20,12 @@ const inUse_skills = [
   { name: 'material-ui', color: '0883FF' },
   { name: 'framer-motion', color: '7B69E3' },
   { name: 'figma', color: 'FF7566' },
-  { name: 'git', color: 'FFFFFF' }
+  { name: 'git', color: 'CFCFCF' }
 ]
 
 const learning_skills = [
   { name: 'jest', color: 'FF5F64' },
-  { name: 'next', color: 'FFFFFF' },
+  { name: 'next', color: 'CFCFCF' },
   { name: 'pwa', color: '0AC958' },
 ]
 
