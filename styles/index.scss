@@ -388,3 +388,9 @@ header {
   padding: 0.5rem 1rem;
   border-radius: $rounded-full;
 }
+
+@include theme(light) {
+  .skill-box span {
+    filter: brightness(0.85);
+  }
+}

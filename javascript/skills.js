@@ -20,12 +20,12 @@ const inUse_skills = [
   { name: 'material-ui', color: '0883FF' },
   { name: 'framer-motion', color: '7B69E3' },
   { name: 'figma', color: 'FF7566' },
-  { name: 'git', color: 'a0a0a0' }
+  { name: 'git', color: 'FFFFFF' }
 ]
 
 const learning_skills = [
   { name: 'jest', color: 'FF5F64' },
-  { name: 'next', color: 'a0a0a0' },
+  { name: 'next', color: 'FFFFFF' },
   { name: 'pwa', color: '0AC958' },
 ]
 
@@ -38,7 +38,7 @@ const addSkills = () => {
     const div = document.createElement('div')
     div.className = 'skill-box'
     div.style.color = `#${skill.color}`
-    div.innerHTML = skill.name
+    div.innerHTML = `<span>${skill.name}</span>`
     inUse_fragment.appendChild(div)
   })
 
@@ -46,7 +46,7 @@ const addSkills = () => {
     const div = document.createElement('div')
     div.className = 'skill-box'
     div.style.color = `#${skill.color}`
-    div.innerHTML = skill.name
+    div.innerHTML = `<span>${skill.name}</span>`
     learning_fragment.appendChild(div)
   })
 
