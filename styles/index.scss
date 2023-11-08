@@ -4,16 +4,21 @@
 
 // header
 header {
+  backdrop-filter: blur(50px);
   display: flex;
   align-items: center;
   padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 
   @include media(md) {
     padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
 
   nav {
-    height: 3rem;
     width: 100%;
     display: none;
     justify-content: space-between;
@@ -247,7 +252,6 @@ header {
   }
 }
 
-// about
 .about {
   background-color: var(--reverse-color);
   padding: 2rem 0;
@@ -426,6 +430,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
+  margin-top: 1.5rem;
 
   p {
     display: flex;
