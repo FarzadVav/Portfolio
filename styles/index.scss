@@ -439,7 +439,10 @@ footer {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
-  margin-top: 1.5rem;
+
+  @include media(md) {
+    margin-top: 1.5rem;
+  }
 
   p {
     display: flex;
@@ -456,6 +459,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    margin-top: 0.5rem;
 
     @include media(md) {
       display: none;
