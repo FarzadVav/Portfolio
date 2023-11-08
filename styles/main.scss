@@ -131,13 +131,14 @@ p {
   gap: 0.65rem;
   line-height: 1.25rem;
   padding: 0 1.25rem;
-  border-radius: $rounded;
+  border-radius: $rounded-full;
   cursor: pointer;
 }
 
 .btn-reverse {
-  background-color: var(--primary-color);
-  color: var(--reverse-color);
+  background-color: var(--reverse-color);
+  color: var(--text-color);
+  stroke: var(--text-color);
   @extend .hover-br;
 }
 
@@ -151,6 +152,17 @@ p {
 .btn-ghust {
   color: var(--primary-color);
   stroke: var(--primary-color);
+
+  &:hover {
+    background-color: var(--bg-color);
+  }
+
+  @extend .hover-br;
+}
+
+.btn-text-ghust {
+  color: var(--text-color);
+  stroke: var(--text-color);
 
   &:hover {
     background-color: var(--bg-color);

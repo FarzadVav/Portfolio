@@ -39,62 +39,17 @@ header {
   }
 }
 
-@mixin header__circle-btn() {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
+.header__socials a {
+  margin-right: 0.75rem;
+}
 
-  @include media(md) {
-    margin-left: 1rem;
-  }
+.header__links a:not(.btn-primary) {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
 
   @include media(xl) {
-    margin-left: 2rem;
-  }
-}
-
-.header__socials a {
-  background-color: var(--bg-color);
-
-  svg {
-    stroke: var(--text-color);
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  @include header__circle-btn()
-}
-
-.header__links {
-  a:not(.btn) {
-    height: 100%;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    padding: 0 1rem;
-
-    @include media(xl) {
-      margin-left: 1.5rem;
-    }
-  }
-}
-
-.header__theme-btn {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  cursor: pointer;
-
-  &:active {
-    filter: brightness(0.8);
-  }
-
-  @include header__circle-btn();
-
-  @include media(md) {
-    background-color: var(--reverse-color);
+    margin-left: 1.5rem;
   }
 }
 
@@ -108,7 +63,7 @@ header {
     filter: brightness($br-dark);
   }
 
-  @include header__circle-btn();
+  // @include header__circle-btn();
 
   @include media(md) {
     display: none;
@@ -267,8 +222,8 @@ header {
   display: inherit;
   justify-content: center;
   align-items: center;
-  padding: 0.25rem 1rem;
-  border-radius: $rounded-full;
+  padding: 0.25rem 0.5rem;
+  border-radius: $rounded;
 
   svg {
     stroke: var(--primary-color);
@@ -349,11 +304,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    a,
-    button {
-      border-radius: 2.5rem;
-    }
 
     li:first-child {
       margin-right: 0.5rem;
@@ -437,7 +387,7 @@ header {
   textarea {
     border: 1px solid var(--text-color);
     color: var(--text-color);
-    padding: 0.5rem 1rem;
+    padding: 0.75rem;
     margin-bottom: 1.5rem;
     border-radius: $rounded;
 
@@ -481,10 +431,6 @@ footer {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
-
-  .btn {
-    border-radius: $rounded-full;
-  }
 
   p {
     display: flex;
