@@ -54,16 +54,12 @@ header {
 }
 
 .header__mobile-menu-btn {
-  background-color: var(--bg-color);
-  stroke: var(--text-color);
-  cursor: pointer;
-  margin-left: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
 
-  &:active {
-    filter: brightness($br-dark);
+  &:hover {
+    background-color: transparent;
   }
-
-  // @include header__circle-btn();
 
   @include media(md) {
     display: none;
@@ -71,7 +67,6 @@ header {
 }
 
 .header__contact-me {
-  height: 100%;
   margin: 0 auto 0 0.5rem;
 
   @include media(md) {
