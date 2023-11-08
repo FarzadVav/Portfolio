@@ -29,12 +29,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-track {
-  background: none;
+  background: var(--reverse-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -137,12 +137,14 @@ p {
 .btn-reverse {
   background-color: var(--primary-color);
   color: var(--reverse-color);
+  @extend .hover-br;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--reverse-color);
   stroke: var(--reverse-color);
+  @extend .hover-br;
 }
 
 .btn-ghust {

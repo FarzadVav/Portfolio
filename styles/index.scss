@@ -391,6 +391,76 @@ header {
 
 @include theme(light) {
   .skill-box span {
-    filter: brightness(0.85);
+    filter: brightness(0.9);
+  }
+}
+
+// Contact me
+.contact {
+  background: linear-gradient(45deg, var(--reverse-color), var(--bg-color));
+  width: 100%;
+  padding: 3rem 0;
+  position: relative;
+  
+  .effect {
+    background: linear-gradient(45deg, var(--bg-color), var(--reverse-color));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 250ms linear;
+  }
+
+  &:hover .effect {
+    opacity: 1;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .title {
+    margin-bottom: 3rem;
+  }
+
+  label {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  input,
+  textarea {
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: $rounded;
+
+    &:focus {
+      border-color: var(--primary-color);
+    }
+
+    &:first-of-type:not(textarea) {
+      width: 33.3333%;
+    }
+
+    &:last-of-type:not(textarea) {
+      width: 66.6666%;
+    }
+  }
+
+  textarea {
+    height: 13rem;
+    width: 100%;
+    resize: vertical;
+  }
+
+  button {
+    width: max-content;
   }
 }
