@@ -61,6 +61,7 @@ header {
 .header__mobile-menu-btn {
   padding-left: 0;
   padding-right: 0;
+  position: relative;
 
   &:hover {
     background-color: transparent;
@@ -68,6 +69,45 @@ header {
 
   @include media(md) {
     display: none;
+  }
+
+  svg:last-of-type {
+    display: none;
+  }
+
+  ul {
+    background-color: var(--reverse-color);
+    width: 50vw;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transform-origin: top left;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    padding: 0.5rem;
+    border-radius: $rounded;
+
+    li {
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.header__mobile-menu-btn.active-menu {
+  ul {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  svg:first-of-type {
+    display: none;
+  }
+
+  svg:last-of-type {
+    display: inline-block;
   }
 }
 
