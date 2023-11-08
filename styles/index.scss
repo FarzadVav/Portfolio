@@ -273,6 +273,7 @@ header {
   span {
     color: var(--primary-color);
     font-size: $fs-base;
+    user-select: text;
   }
 }
 
