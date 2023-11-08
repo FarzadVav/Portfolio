@@ -346,20 +346,29 @@ header {
 
 // Contact me
 .contact {
-  background: linear-gradient(45deg, var(--reverse-color), var(--bg-color));
+  background: linear-gradient(to bottom, var(--reverse-color), var(--bg-color));
   width: 100%;
   padding: 3rem 0;
   position: relative;
+
+  @include media(md) {
+    background: linear-gradient(45deg, var(--reverse-color), var(--bg-color));
+  }
 
   .effect {
     background: linear-gradient(45deg, var(--bg-color), var(--reverse-color));
     width: 100%;
     height: 100%;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     transition: 250ms linear;
+
+    @include media(md) {
+      display: block;
+    }
   }
 
   &:hover .effect {
