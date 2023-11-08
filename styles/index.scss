@@ -436,4 +436,15 @@ footer {
       margin: 0 0.35rem;
     }
   }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    @include media(md) {
+      display: none;
+    }
+  }
 }
