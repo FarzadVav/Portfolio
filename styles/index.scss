@@ -401,7 +401,7 @@ header {
   width: 100%;
   padding: 3rem 0;
   position: relative;
-  
+
   .effect {
     background: linear-gradient(45deg, var(--bg-color), var(--reverse-color));
     width: 100%;
@@ -452,6 +452,10 @@ header {
     &:last-of-type:not(textarea) {
       width: 66.6666%;
     }
+
+    @include max-media(md) {
+      width: 100% !important;
+    }
   }
 
   textarea {
@@ -461,6 +465,10 @@ header {
   }
 
   button {
-    width: max-content;
+    width: 100%;
+
+    @include media(md) {
+      width: max-content;
+    }
   }
 }
