@@ -507,3 +507,35 @@ footer {
     }
   }
 }
+
+// Modal
+.modal {
+  backdrop-filter: blur(50px);
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  cursor: zoom-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .text {
+    background-color: var(--reverse-color);
+    color: var(--text-color);
+    width: max-content;
+    max-width: 75%;
+    padding: 2rem;
+    border-radius: $rounded-lg;
+    cursor: auto;
+  }
+}
