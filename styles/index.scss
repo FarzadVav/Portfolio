@@ -518,6 +518,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -533,9 +534,15 @@ footer {
     background-color: var(--reverse-color);
     color: var(--text-color);
     width: max-content;
-    max-width: 75%;
+    max-width: 100%;
+    max-height: 100%;
     padding: 2rem;
     border-radius: $rounded-lg;
+    overflow-y: auto;
     cursor: auto;
+    
+    @include media(md) {
+      max-width: 75%;
+    }
   }
 }

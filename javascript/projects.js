@@ -13,7 +13,7 @@ const generateId = () => {
 const projects = [
   { id: generateId(), img: '/images/project.jpg', name: 'JobVision-clone', link: 'www.sabzlearn.ir', github: 'https://github.com/FarzadVav/JobVision-clone', info: 'lorem 123' },
   { id: generateId(), img: '/images/project.jpg', name: 'JobVision-clone 2', link: 'www.sabzlearn.ir', github: 'https://github.com/FarzadVav/JobVision-clone', info: 'lorem 456' },
-  { id: generateId(), img: '/images/project.jpg', name: 'JobVision-clone 3', link: 'www.sabzlearn.ir', github: 'https://github.com/FarzadVav/JobVision-clone', info: 'lorem 789' }
+  { id: generateId(), img: '/images/project.jpg', name: 'JobVision-clone 3', link: 'www.sabzlearn.ir', github: 'https://github.com/FarzadVav/JobVision-clone', info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ut quos deserunt qui vel voluptatibus? Aperiam, reprehenderit. Ab animi impedit aut repellendus beatae assumenda reprehenderit similique architecto iure alias ex consequatur non blanditiis corrupti hic, deserunt at unde nam sunt! Eos, expedita! Debitis, nesciunt! Consectetur itaque at eveniet sapiente nostrum officiis necessitatibus, sint totam, maiores nesciunt tempore! Sunt adipisci ipsam quisquam beatae. Deserunt, nam soluta labore inventore cupiditate quisquam commodi, doloribus mollitia aperiam excepturi optio adipisci! Doloremque est, doloribus itaque aut tempora sed amet accusantium laborum assumenda modi qui? Repellendus laboriosam incidunt architecto velit totam placeat expedita deleniti eos accusamus.' }
 ]
 
 // Events
