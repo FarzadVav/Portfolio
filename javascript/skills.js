@@ -1,33 +1,12 @@
+import supabase from "./createClient"
+
 // --- Elements
 const inUse_wrapper = document.querySelector('.in-use')
 const learning_wrapper = document.querySelector('.learning')
 
 // --- States
-const inUse_skills = [
-  { name: 'html', color: 'E5532D' },
-  { name: 'css', color: '088DCC' },
-  { name: 'javascript', color: 'F7E025' },
-  { name: 'react', color: '65DBFB' },
-  { name: 'typescript', color: '377CC8' },
-  { name: 'react-query', color: 'FF4759' },
-  { name: 'swr', color: '65DBFB' },
-  { name: 'axios', color: '5F2FE5' },
-  { name: 'tailwind', color: '1DC0CD' },
-  { name: 'bootstrap', color: '8F1BFC' },
-  { name: 'sass', color: 'CE6B9C' },
-  { name: 'react-hook-form', color: 'ED5F93' },
-  { name: 'zod', color: '2E5386' },
-  { name: 'material-ui', color: '0883FF' },
-  { name: 'framer-motion', color: '7B69E3' },
-  { name: 'figma', color: 'FF7566' },
-  { name: 'git', color: 'CFCFCF' }
-]
-
-const learning_skills = [
-  { name: 'jest', color: 'FF5F64' },
-  { name: 'next', color: 'CFCFCF' },
-  { name: 'pwa', color: '0AC958' },
-]
+const inUse_skills = []
+const learning_skills = []
 
 // --- Functions
 const addSkills = () => {
@@ -57,4 +36,18 @@ const addSkills = () => {
   learning_wrapper.appendChild(learning_fragment)
 }
 
-export default addSkills
+// Events
+window.addEventListener('load', async () => {
+  const { data } = await supabase
+    .from('skills')
+    .select('*')
+
+  data.forEach(skill => {
+    if (skill.inLearning) {
+      learning_skills.push(skill)
+    } else {
+      inUse_skills.push(skill)
+    }
+  })
+  addSkills()
+})
