@@ -323,6 +323,7 @@ header {
   border-radius: $rounded-lg;
 
   img {
+    cursor: url('/public/images/emoji.svg'), auto;
     background-color: var(--bg-color);
     filter: brightness($br-light);
     width: 100%;
@@ -541,7 +542,7 @@ footer {
     border-radius: $rounded-lg;
     overflow-y: auto;
     cursor: auto;
-    
+
     @include media(md) {
       max-width: 75%;
     }

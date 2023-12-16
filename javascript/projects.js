@@ -1,3 +1,4 @@
+import supabase from "./createClient"
 import setModalState from "./modal"
 
 // --- Elements
@@ -10,14 +11,10 @@ const generateId = () => {
 }
 
 // --- States
-const projects = [
-  { id: generateId(), img: '/images/project.jpg', name: 'JobVision-clone', link: 'www.sabzlearn.ir', github: 'https://github.com/FarzadVav/JobVision-clone', info: 'lorem 123' },
-  { id: generateId(), img: '/images/project.jpg', name: 'JobVision-clone 2', link: 'www.sabzlearn.ir', github: 'https://github.com/FarzadVav/JobVision-clone', info: 'lorem 456' },
-  { id: generateId(), img: '/images/project.jpg', name: 'JobVision-clone 3', link: 'www.sabzlearn.ir', github: 'https://github.com/FarzadVav/JobVision-clone', info: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam ut quos deserunt qui vel voluptatibus? Aperiam, reprehenderit. Ab animi impedit aut repellendus beatae assumenda reprehenderit similique architecto iure alias ex consequatur non blanditiis corrupti hic, deserunt at unde nam sunt! Eos, expedita! Debitis, nesciunt! Consectetur itaque at eveniet sapiente nostrum officiis necessitatibus, sint totam, maiores nesciunt tempore! Sunt adipisci ipsam quisquam beatae. Deserunt, nam soluta labore inventore cupiditate quisquam commodi, doloribus mollitia aperiam excepturi optio adipisci! Doloremque est, doloribus itaque aut tempora sed amet accusantium laborum assumenda modi qui? Repellendus laboriosam incidunt architecto velit totam placeat expedita deleniti eos accusamus.' }
-]
+let projects = []
 
-// Events
-window.addEventListener('load', () => {
+// --- Functions
+const addProject = () => {
   const fragment = document.createDocumentFragment()
 
   projects.forEach(project => {
@@ -25,7 +22,7 @@ window.addEventListener('load', () => {
     div.className = 'project__box'
 
     const img = document.createElement('img')
-    img.setAttribute('src', project.img)
+    img.setAttribute('src', project.picture)
     img.setAttribute('alt', project.name)
 
     const span = document.createElement('span')
@@ -34,7 +31,7 @@ window.addEventListener('load', () => {
     const ul = document.createElement('ul')
     ul.innerHTML = `
       <li>
-        <a class="btn btn-primary" href="${project.link}">
+        <a class="btn btn-primary" href="${project.link}" target="_blank">
           view
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
             stroke-linecap="round" stroke-linejoin="round">
@@ -45,7 +42,7 @@ window.addEventListener('load', () => {
         </a>
         </li>
         <li>
-        <a class="btn btn-primary" href="${project.github}">
+        <a class="btn btn-primary" href="${project.repo}" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
             stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -68,7 +65,7 @@ window.addEventListener('load', () => {
         </svg>
       </button>
     `
-    li.addEventListener('click', () => setModalState(true, project.info))
+    li.addEventListener('click', () => setModalState(true, project.description))
 
     ul.appendChild(li)
     div.append(img, span, ul)
@@ -79,6 +76,14 @@ window.addEventListener('load', () => {
   wrapper.innerHTML = ''
 
   wrapper.appendChild(fragment)
-})
+}
 
-function test() { console.log(123) }
+// --- Events
+window.addEventListener('load', async () => {
+  const { data } = await supabase
+    .from('projects')
+    .select('*')
+
+  projects = data
+  addProject()
+})

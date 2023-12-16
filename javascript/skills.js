@@ -36,7 +36,7 @@ const addSkills = () => {
   learning_wrapper.appendChild(learning_fragment)
 }
 
-// Events
+// --- Events
 window.addEventListener('load', async () => {
   const { data } = await supabase
     .from('skills')
