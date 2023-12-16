@@ -89,6 +89,18 @@ p {
   }
 }
 
+.flex-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: start;
+  gap: 1rem;
+  
+  @include media(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .mt-elem {
   margin-top: $m-elem;
 }

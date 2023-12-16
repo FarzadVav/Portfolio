@@ -389,33 +389,14 @@ header {
 
 // Contact me
 .contact {
-  background: linear-gradient(to bottom, var(--reverse-color), var(--bg-color));
+  background: linear-gradient(to bottom, var(--reverse-color), var(--bg-color) 90%);
   width: 100%;
-  padding: 3rem 0;
+  padding: 2rem 0;
+  border-radius: $rounded-lg;
   position: relative;
 
   @include media(md) {
-    background: linear-gradient(45deg, var(--reverse-color), var(--bg-color));
-  }
-
-  .effect {
-    background: linear-gradient(45deg, var(--bg-color), var(--reverse-color));
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: 250ms linear;
-
-    @include media(md) {
-      display: block;
-    }
-  }
-
-  &:hover .effect {
-    opacity: 1;
+    width: 50%;
   }
 
   .wrapper {
@@ -425,43 +406,27 @@ header {
     position: relative;
   }
 
-  .title {
-    margin-bottom: 3rem;
-  }
-
   label {
     width: 100%;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   input,
   textarea {
     border: 1px solid var(--text-color);
     color: var(--text-color);
+    width: 100%;
     padding: 0.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     border-radius: $rounded;
 
     &:focus {
       border-color: var(--primary-color);
     }
-
-    &:first-of-type:not(textarea) {
-      width: 33.3333%;
-    }
-
-    &:last-of-type:not(textarea) {
-      width: 66.6666%;
-    }
-
-    @include max-media(md) {
-      width: 100% !important;
-    }
   }
 
   textarea {
-    height: 13rem;
-    width: 100%;
+    height: 10rem;
     resize: vertical;
   }
 
@@ -470,6 +435,54 @@ header {
 
     @include media(md) {
       width: max-content;
+    }
+  }
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media(md) {
+    width: 50%;
+  }
+
+  .details__item {
+    background-color: var(--primary-color);
+    color: var(--reverse-color);
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: $rounded;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:first-child {
+      border-radius: $rounded-lg $rounded-lg $rounded $rounded;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-radius: $rounded $rounded $rounded-lg $rounded-lg;
+    }
+
+    span {
+      display: block;
+      font-weight: bold;
+      letter-spacing: 0.05rem;
+      padding: 1rem;
+    }
+
+    p {
+      display: none;
+      width: 100%;
+      padding: 0.5rem 1rem 1.5rem;
+      cursor: text;
+
+      &.active {
+        display: block;
+      }
     }
   }
 }
