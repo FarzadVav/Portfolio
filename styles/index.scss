@@ -195,7 +195,7 @@ header {
       font-size: $fs-md;
     }
 
-    span {
+    a {
       color: var(--second-color);
     }
   }
@@ -300,7 +300,7 @@ header {
   a {
     text-decoration: underline;
     display: inline-block;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
   }
 }
 
