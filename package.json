@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.4",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "toastify-js": "^1.12.0"
   }
 }

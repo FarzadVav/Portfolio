@@ -94,7 +94,7 @@ p {
   flex-direction: column-reverse;
   align-items: start;
   gap: 1rem;
-  
+
   @include media(md) {
     flex-direction: row;
     justify-content: space-between;
@@ -182,4 +182,23 @@ p {
   }
 
   @extend .hover-br;
+}
+
+.toast {
+  background: var(--primary-color) !important;
+  color: var(--text-color) !important;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.25rem !important;
+  border-radius: $rounded-full !important;
+  
+  .toast-close {
+    display: none;
+  }
+}
+
+.toast-error {
+  @extend .toast;
+  background: var(--second-color) !important;
+  color: var(--reverse-color) !important;
 }

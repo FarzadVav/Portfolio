@@ -391,19 +391,15 @@ header {
 .contact {
   background: linear-gradient(to bottom, var(--reverse-color), var(--bg-color) 90%);
   width: 100%;
-  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
   border-radius: $rounded-lg;
   position: relative;
 
   @include media(md) {
     width: 50%;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
   }
 
   label {
@@ -435,6 +431,10 @@ header {
 
     @include media(md) {
       width: max-content;
+    }
+
+    svg {
+      rotate: 45deg;
     }
   }
 }
