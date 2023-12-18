@@ -439,7 +439,7 @@ header {
   }
 }
 
-.details {
+.accordions {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -449,7 +449,7 @@ header {
     width: 50%;
   }
 
-  .details__item {
+  .accordions__item {
     background-color: var(--primary-color);
     color: var(--reverse-color);
     width: 100%;

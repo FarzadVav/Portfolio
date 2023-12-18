@@ -4,12 +4,6 @@ import setModalState from "./modal"
 // --- Elements
 const wrapper = document.querySelector('.projects')
 
-// --- Functions
-const generateId = () => {
-  const randomNumbers = () => Math.floor(Math.random() * Math.random())
-  return `${randomNumbers()}-${randomNumbers()}-${randomNumbers()}-${randomNumbers()}`
-}
-
 // --- States
 let projects = []
 
