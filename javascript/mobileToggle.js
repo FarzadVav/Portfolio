@@ -1,8 +1,18 @@
 // --- Elements
 const toggleBtn = document.querySelector('.header__mobile-menu-btn')
-const dropDown = document.querySelector('.header__mobile-menu-btn ul')
+const menu = document.querySelector('.mobile-menu')
+const menuLinks = document.querySelectorAll('.mobile-menu a')
 
 // --- Functions
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    toggleBtn.classList.remove('active')
+    menu.classList.remove('active')
+  })
+})
+
+// --- Evnts
 toggleBtn.addEventListener('click', () => {
-  toggleBtn.classList.toggle('active-menu')
+  toggleBtn.classList.toggle('active')
+  menu.classList.toggle('active')
 })

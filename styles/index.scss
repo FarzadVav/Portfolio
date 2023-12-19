@@ -1,3 +1,4 @@
+@import "main";
 @import "default";
 @import "theme.mixin";
 @import "media.mixin";
@@ -42,6 +43,12 @@ header {
       }
     }
   }
+
+  .header__theme-btn {
+    @include max-media(md) {
+      background: none;
+    }
+  }
 }
 
 .header__socials a {
@@ -63,6 +70,14 @@ header {
   padding-right: 0;
   position: relative;
 
+  &.active svg:first-child {
+    display: none;
+  }
+
+  &.active svg:last-child {
+    display: inline-block;
+  }
+
   &:hover {
     background-color: transparent;
   }
@@ -71,43 +86,8 @@ header {
     display: none;
   }
 
-  svg:last-of-type {
+  svg:last-child {
     display: none;
-  }
-
-  ul {
-    background-color: var(--reverse-color);
-    width: 50vw;
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-    transform-origin: top left;
-    position: absolute;
-    top: 3.5rem;
-    left: 0;
-    padding: 0.5rem;
-    border-radius: $rounded;
-
-    li {
-      width: 100%;
-      padding: 0.5rem 0;
-    }
-  }
-}
-
-.header__mobile-menu-btn.active-menu {
-  ul {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-  }
-
-  svg:first-of-type {
-    display: none;
-  }
-
-  svg:last-of-type {
-    display: inline-block;
   }
 }
 
@@ -116,6 +96,67 @@ header {
 
   @include media(md) {
     display: none;
+  }
+}
+
+// mobile menu
+.mobile-menu {
+  background-color: var(--reverse-color);
+  box-shadow: 0 0 3rem #2e2e2e53;
+  width: 100%;
+  padding: $space-6 $space-3 $space-3;
+  border-radius: $rounded-lg $rounded-lg 0 0;
+  transition: 300ms ease-out;
+  translate: 0 101%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  &.active {
+    translate: 0;
+  }
+
+  &::after {
+    content: '';
+    background-color: var(--text-color);
+    width: 3rem;
+    height: 3px;
+    border-radius: $rounded-full;
+    position: absolute;
+    top: 0.65rem;
+    left: 50%;
+    translate: -1.5rem 0;
+    opacity: 0.25;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 100%;
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      margin: $space-1 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:not(:last-child) a {
+        @extend .btn;
+        @extend .btn-bg;
+      }
+
+      a {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -195,7 +236,7 @@ header {
       font-size: $fs-md;
     }
 
-    a {
+    span {
       color: var(--second-color);
     }
   }

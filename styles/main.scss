@@ -148,17 +148,24 @@ p {
   cursor: pointer;
 }
 
-.btn-reverse {
-  background-color: var(--reverse-color);
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--reverse-color);
+  stroke: var(--reverse-color);
+  @extend .hover-br;
+}
+
+.btn-bg {
+  background-color: var(--bg-color);
   color: var(--text-color);
   stroke: var(--text-color);
   @extend .hover-br;
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--reverse-color);
-  stroke: var(--reverse-color);
+.btn-reverse {
+  background-color: var(--reverse-color);
+  color: var(--text-color);
+  stroke: var(--text-color);
   @extend .hover-br;
 }
 
@@ -191,7 +198,7 @@ p {
   line-height: 2.5rem;
   padding: 0 1.25rem !important;
   border-radius: $rounded-full !important;
-  
+
   .toast-close {
     display: none;
   }
