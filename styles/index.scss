@@ -43,11 +43,27 @@ header {
       }
     }
   }
+}
 
-  .header__theme-btn {
-    @include max-media(md) {
-      background: none;
-    }
+.header__theme-btn {
+  svg:last-child {
+    display: none;
+  }
+
+  &.active svg:first-child {
+    display: none;
+  }
+
+  &.active svg:last-child {
+    display: inline-block;
+  }
+
+  @include max-media(md) {
+    background: none;
+  }
+
+  svg {
+    display: inline-block;
   }
 }
 
@@ -84,6 +100,10 @@ header {
 
   @include media(md) {
     display: none;
+  }
+
+  svg {
+    display: inline-block;
   }
 
   svg:last-child {
