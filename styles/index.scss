@@ -102,7 +102,6 @@ header {
 // mobile menu
 .mobile-menu {
   background-color: var(--reverse-color);
-  box-shadow: 0 0 3rem #2e2e2e53;
   width: 100%;
   padding: $space-6 $space-3 $space-3;
   border-radius: $rounded-lg $rounded-lg 0 0;
@@ -157,6 +156,18 @@ header {
         width: 100%;
       }
     }
+  }
+}
+
+@include theme(light) {
+  .mobile-menu {
+    box-shadow: 0 0 5rem #2e2e2e75;
+  }
+}
+
+@include theme(dark) {
+  .mobile-menu {
+    box-shadow: 0 0 5rem #5e5e5e65;
   }
 }
 
