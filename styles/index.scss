@@ -125,7 +125,8 @@ header {
   width: 100%;
   padding: $space-6 $space-3 $space-3;
   border-radius: $rounded-lg $rounded-lg 0 0;
-  transition: 300ms ease-out;
+  transition: 450ms ease-in-out;
+  opacity: 0;
   translate: 0 101%;
   position: fixed;
   bottom: 0;
@@ -133,6 +134,7 @@ header {
   z-index: 1000;
 
   &.active {
+    opacity: 1;
     translate: 0;
   }
 
