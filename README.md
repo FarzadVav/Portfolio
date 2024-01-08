@@ -2,6 +2,8 @@
 
 I implemented this project with basic web technologies. My intention is to create a website to present portfolios, introduce myself and my resume.
 
+![My portfolio](https://github.com/FarzadVav/FarzadVav/blob/main/My%20Portfolio.png)
+
 ---
 
 <p align="center">
