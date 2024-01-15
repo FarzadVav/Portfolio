@@ -5,7 +5,7 @@ const toggle = document.querySelector('.header__theme-btn')
 // --- States
 const LIGHT = 'light'
 const DARK = 'dark'
-let theme = html.dataset.theme // 'light' or 'dark'
+let theme = DARK // 'light' or 'dark'
 
 // --- Functions
 const changeThemeHandler = () => {
